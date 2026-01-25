@@ -109,4 +109,4 @@ triple_quotes = """Первая строка
 print(single_quotes)
 print(double_quotes)
 print(triple_quotes)
-
+#s
