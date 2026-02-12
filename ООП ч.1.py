@@ -183,3 +183,255 @@ class Pizza:
         print(f"Пицца с {self.topping}!")
 my_pizza = Pizza("Сыр")
 my_pizza.describe()
+
+# Задача №15 (Тема: Объект класса)
+# Создайте класс и его объект:
+# 1. Создайте класс `Phone`
+# 2. Добавьте конструктор `__init__` с параметром `model`
+# 3. Сохраните модель как атрибут экземпляра
+# 4. Создайте объект класса `Phone` с моделью "iPhone 13"
+# 5. Выведите атрибут `model` созданного объекта
+
+class  Phone:
+    def __init__(self,model):
+        self.model = model
+my_phone = Phone("iPhone 13")
+print(my_phone.model)
+
+
+# Задача №16 (Тема: Понимание параметра self)
+# Создайте класс, демонстрирующий работу self:
+# 1. Создайте класс `User`
+# 2. Добавьте конструктор `__init__` с параметрами `username` и `email`
+# 3. Сохраните их как атрибуты экземпляра (используя self)
+# 4. Создайте два разных объекта класса `User` с разными данными
+# 5. Выведите атрибуты каждого объекта
+
+
+class User:
+    def __init__(self,username,email):
+        self.username = username
+        self.email = email
+my_fail = User("Artur","artur.vorona@mail.ru")
+my_fail1 = User("Anna","Kuz@mail.ru")
+
+print(my_fail.username)
+print(my_fail.email)
+print(my_fail1.username)
+print(my_fail1.email)
+
+# Задача №17 (Тема: Общие атрибуты)
+# Создайте класс с общим атрибутом и объектами:
+# 1. Создайте класс `Company`
+# 2. Добавьте общий атрибут класса `industry` со значением "IT"
+# 3. Добавьте конструктор `__init__` с параметром `name`
+# 4. Сохраните `name` как атрибут экземпляра
+# 5. Создайте два объекта класса `Company` с разными названиями
+# 6. Выведите для каждого объекта: название компании и отрасль
+
+class Company:
+    industry = "IT"
+    def __init__(self,name):
+        self.name = name
+my_company = Company("HHP")
+my_company1 = Company("SSH")
+print(my_company.name)
+print(my_company.industry)
+print(my_company1.name)
+print(my_company.industry)
+
+# Задача №18 (Тема: Введение в ООП)
+# Создайте класс, описывающий реальный объект:
+# 1. Создайте класс `Lamp` (лампа)
+# 2. Добавьте конструктор `__init__` с параметром `color` (цвет)
+# 3. Сохраните цвет как атрибут экземпляра
+# 4. Добавьте метод `turn_on`, который выводит: "Лампа [color] включена"
+# 5. Создайте объект класса `Lamp` с цветом "белая"
+# 6. Вызовите метод `turn_on` у объекта
+
+class  Lamp:
+    def __init__(self,color):
+        self.color = color
+    def turn_on(self):
+        print(f"Лампа {self.color} включена")
+my_lamp = Lamp("белая")
+my_lamp.turn_on()
+
+
+# Задача №19 (Тема: Введение в ООП)
+# Создайте класс, описывающий реальный объект:
+# 1. Создайте класс `Clock` (часы)
+# 2. Добавьте конструктор `__init__` с параметром `brand` (бренд)
+# 3. Сохраните бренд как атрибут экземпляра
+# 4. Добавьте метод `tick`, который выводит: "Часы [brand] тикают: тик-так"
+# 5. Создайте объект класса `Clock` с брендом "Casio"
+# 6. Вызовите метод `tick` у объекта
+
+class Clock:
+    def __init__(self,brand):
+        self.brand = brand
+    def tick(self):
+        print(f"Часы {self.brand} тикают: тик-так")
+my_clock = Clock("Casio")
+my_clock.tick()
+
+
+# Задача №20 (Тема: Введение в ООП)
+# Создайте класс, описывающий реальный объект:
+# 1. Создайте класс `Teapot` (чайник)
+# 2. Добавьте конструктор `__init__` с параметром `volume` (объем)
+# 3. Сохраните объем как атрибут экземпляра
+# 4. Добавьте метод `boil`, который выводит: "Чайник объемом [volume] л закипает"
+# 5. Создайте объект класса `Teapot` с объемом 1.5
+# 6. Вызовите метод `boil` у объекта
+
+class Teapot:
+    def __init__(self,volume):
+        self.volume = volume
+    def boil(self):
+        print(f"Чайник объемом {self.volume} л закипает")
+my_teapot = Teapot(1.5)
+my_teapot.boil()
+
+# Задача №21 (Тема: Общие атрибуты)
+# Создайте класс с общим атрибутом:
+# 1. Создайте класс `Forest` (лес)
+# 2. Добавьте общий атрибут класса `biome` со значением "Леса"
+# 3. Добавьте конструктор `__init__` с параметром `name` (название леса)
+# 4. Сохраните название как атрибут экземпляра
+# 5. Создайте объект класса `Forest` с названием "Беловежская пуща"
+# 6. Выведите для объекта: название леса и биом
+
+class Forest:
+    biome = "Леса"
+    def __init__(self,name):
+        self.name = name
+my_forest = Forest("Беловежская пуща")
+print(my_forest.name)
+print(my_forest.biome)
+
+
+# Задача №22 (Тема: Общие атрибуты)
+# Создайте класс с общим атрибутом и несколькими объектами:
+# 1. Создайте класс `Planet`
+# 2. Добавьте общий атрибут класса `type` со значением "Планета"
+# 3. Добавьте конструктор `__init__` с параметром `name`
+# 4. Сохраните название как атрибут экземпляра
+# 5. Создайте два объекта класса `Planet` с разными названиями
+# 6. Выведите для каждого объекта: название планеты и тип
+
+class Planet:
+    type = "Планета"
+    def __init__(self,name):
+        self.name = name
+my_planet = Planet("Земля")
+my_planet1 = Planet("Венера")
+print(my_planet.type)
+print(my_planet.name)
+print(my_planet1.type)
+print(my_planet1.name)
+
+# Задача №23 (Тема: Введение в ООП)
+# Создайте класс, описывающий реальный объект:
+# 1. Создайте класс `Backpack` (рюкзак)
+# 2. Добавьте конструктор `__init__` с параметром `color` (цвет)
+# 3. Сохраните цвет как атрибут экземпляра
+# 4. Добавьте метод `pack`, который выводит: "Рюкзак [color] упакован"
+# 5. Создайте объект класса `Backpack` с цветом "черный"
+# 6. Вызовите метод `pack` у объекта
+
+class Backpack:
+    def __init__(self,color):
+        self.color = color
+    def pack(self):
+        print(f"Рюкзак {self.color} упакован")
+my_color = Backpack("черный")
+my_color.pack()
+
+# Задача №24 (Тема: Создание класса)
+# Создайте пустой класс:
+# 1. Создайте класс с именем `Notebook`
+# 2. Класс пока не должен содержать никаких атрибутов и методов
+# 3. Используйте `pass`
+
+class Notebook:
+    pass
+
+
+# Задача №25 (Тема: Общие атрибуты)
+# Создайте класс с общим атрибутом:
+# 1. Создайте класс `Ocean`
+# 2. Добавьте общий атрибут класса `water` со значением "Соленая вода"
+# 3. Выведите этот атрибут на экран через обращение к классу
+
+class Ocean:
+    water = "Соленая вода"
+print(Ocean.water)
+
+# Задача №26 (Тема: Конструктор класса __init__)
+# Создайте класс с конструктором:
+# 1. Создайте класс `Smartphone`
+# 2. Добавьте конструктор `__init__` с параметрами `brand` и `storage`
+# 3. Внутри конструктора сохраните их как атрибуты экземпляра
+# 4. Создайте объект класса `Smartphone` с брендом "Samsung" и памятью 128
+# 5. Выведите оба атрибута созданного объекта
+
+class Smartphone:
+    def __init__(self,brand,storage):
+        self.brand = brand
+        self.storage = storage
+my_smartphone = Smartphone("Samsung",128)
+print(my_smartphone.brand)
+print(my_smartphone.storage)
+
+# Задача №27 (Тема: Методы класса)
+# Создайте класс с простым методом:
+# 1. Создайте класс `Player`
+# 2. Добавьте конструктор `__init__` с параметром `nickname`
+# 3. Сохраните никнейм как атрибут экземпляра
+# 4. Добавьте метод `greet`, который выводит: "[nickname] в игре!"
+# 5. Создайте объект класса `Player` с никнеймом "ProGamer"
+# 6. Вызовите метод `greet` у объекта
+
+class Player:
+    def __init__(self,nickname):
+        self.nickname = nickname
+    def greet(self):
+        print(f"{self.nickname} в игре!")
+my_player = Player("ProGamer")
+my_player.greet()
+
+# Задача №28 (Тема: Объект класса)
+# Создайте класс и несколько его объектов:
+# 1. Создайте класс `Table`
+# 2. Добавьте конструктор `__init__` с параметром `material` (материал)
+# 3. Сохраните материал как атрибут экземпляра
+# 4. Создайте два объекта класса `Table` с разными материалами
+# 5. Выведите атрибут `material` каждого объекта
+
+class Table:
+    def __init__(self,material):
+        self.material = material
+my_table = Table("Дерево")
+my_table1 = Table("Железо")
+print(my_table.material)
+print(my_table1.material)
+
+# Задача №29 (Тема: Понимание параметра self)
+# Создайте класс, демонстрирующий работу self:
+# 1. Создайте класс `Message`
+# 2. Добавьте конструктор `__init__` с параметром `text`
+# 3. Сохраните текст как атрибут экземпляра
+# 4. Добавьте метод `show`, который выводит: "Сообщение: [text]"
+# 5. Создайте два разных объекта класса `Message` с разными текстами
+# 6. Вызовите метод `show` для каждого объекта
+
+class Message:
+    def __init__(self,text):
+        self.text = text
+    def show(self):
+        print(f"Сообщение: {self.text}")
+my_message = Message("TimeNewRoman")
+my_message1 = Message("Sora1")
+my_message.show()
+my_message1.show()
