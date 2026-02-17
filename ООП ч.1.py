@@ -918,3 +918,4 @@ class Bottle:
 my_bottle = Bottle(1.5,"пластик")
 my_bottle.fill()
 my_bottle.show_info()
+
