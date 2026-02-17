@@ -687,3 +687,4 @@ def say_something():
     print("Что-то происходит")
 
 say_something()
+
