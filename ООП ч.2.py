@@ -612,3 +612,69 @@ class Plane(Transport):
 my_plane = Plane(800,10000)
 my_plane.move()
 my_plane.show_altitude()
+
+
+# Задача №39 (Тема: Создание родительского класса)
+# Создайте простой родительский класс:
+# 1. Создайте класс `Device` (устройство)
+# 2. Добавьте конструктор `__init__` с параметром `brand`
+# 3. Сохраните бренд как атрибут экземпляра
+# 4. Добавьте метод `power_on`, который выводит: "[brand] включен"
+
+class Device:
+    def __init__(self, brand):
+        self.brand = brand
+    def power_on(self):
+        print(f"{self.brand} включен")
+
+
+# Задача №40 (Тема: Создание дочернего класса)
+# Создайте дочерний класс, наследующий от Device:
+# 1. Создайте класс `Smartphone`, который наследуется от `Device`
+# 2. В классе `Smartphone` пока используйте только `pass`
+# 3. Создайте объект класса `Smartphone` с брендом "Samsung"
+# 4. Вызовите унаследованный метод `power_on` для этого объекта
+
+class Smartphone(Device):
+    pass
+my_smartphone = Smartphone("Samsung")
+my_smartphone.power_on()
+
+
+# Задача №41 (Тема: Добавление уникальных методов в дочерний класс)
+# Добавьте свой метод в дочерний класс:
+# 1. Создайте класс `Laptop`, который наследуется от `Device`
+# 2. Добавьте в класс `Laptop` метод `open_lid`, который выводит: "[brand] открывает крышку"
+# 3. Создайте объект класса `Laptop` с брендом "HP"
+# 4. Вызовите унаследованный метод `power_on`
+# 5. Вызовите собственный метод `open_lid`
+
+
+class Laptop(Device):
+    def open_lid(self):
+        print(f"{self.brand} открывает крышку")
+my_laptop = Laptop("HP")
+my_laptop.power_on()
+my_laptop.open_lid()
+
+
+# Задача №42 (Тема: Добавление уникальных атрибутов в дочерний класс)
+# Добавьте свой атрибут в дочерний класс:
+# 1. Создайте класс `Tablet`, который наследуется от `Device`
+# 2. Добавьте конструктор `__init__` с параметрами `brand` и `screen_size`
+# 3. Внутри конструктора вызовите родительский конструктор для `brand`
+# 4. Сохраните `screen_size` как новый атрибут экземпляра
+# 5. Добавьте метод `show_screen`, который выводит: "Размер экрана: [screen_size] дюймов"
+# 6. Создайте объект класса `Tablet` с брендом "Apple" и размером экрана 11
+# 7. Вызовите метод `power_on` и метод `show_screen`
+
+
+class Tablet(Device):
+    def __init__(self, brand,screen_size):
+        super().__init__(brand)
+        self.screen_size = screen_size
+    def show_screen(self):
+        print(f"Размер экрана: {self.screen_size} дюймов")
+my_tablet = Tablet("Apple",11)
+my_tablet.power_on()
+my_tablet.show_screen()
