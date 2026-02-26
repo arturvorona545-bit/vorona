@@ -1439,3 +1439,105 @@ my_button = Button("МИР")
 my_button2 = Button("РИМ")
 my_button2.click()
 my_button.click()
+
+
+
+# Задача №93 (Тема: Создание класса)
+# Создайте пустой класс:
+# 1. Создайте класс с именем `Glass`
+# 2. Используйте `pass` внутри класса
+# 3. Класс пока не должен содержать никаких атрибутов и методов
+
+class Glass:
+    pass
+
+
+# Задача №94 (Тема: Общие атрибуты)
+# Создайте класс с общим атрибутом:
+# 1. Создайте класс `Ocean`
+# 2. Добавьте общий атрибут класса `type` со значением "океан"
+# 3. Выведите этот атрибут на экран через обращение к классу
+
+class Ocean:
+    type = "океан"
+print(Ocean.type)
+
+
+# Задача №95 (Тема: Конструктор класса __init__)
+# Создайте класс с конструктором:
+# 1. Создайте класс `Coffee`
+# 2. Добавьте конструктор `__init__` с параметрами `type` и `sugar`
+# 3. Внутри конструктора сохраните их как атрибуты экземпляра
+# 4. Создайте объект класса `Coffee` с типом "латте" и сахаром 2
+# 5. Выведите атрибуты созданного объекта
+
+class Coffee:
+    def __init__(self,type,sugar):
+        self.type = type
+        self.sugar = sugar
+my_coffe = Coffee("латте", 2)
+print(my_coffe.type)
+print(my_coffe.sugar)
+
+
+# Задача №96 (Тема: Методы класса)
+# Создайте класс с методом:
+# 1. Создайте класс `Speaker`
+# 2. Добавьте метод `say` с параметрами `self` и `phrase`
+# 3. Метод должен выводить: "Говорю: [phrase]"
+# 4. Создайте объект класса `Speaker`
+# 5. Вызовите метод с фразой "Повторение - мать учения"
+
+class Speaker:
+    def say(self,phrase):
+        print(f"Говорю: {phrase}")
+my_speaker = Speaker()
+my_speaker.say("Повторение - мать учения")
+
+
+# Задача №97 (Тема: Объект класса)
+# Создайте несколько объектов класса:
+# 1. Создайте класс `Planet`
+# 2. Добавьте конструктор `__init__` с параметром `name`
+# 3. Сохраните название как атрибут экземпляра
+# 4. Создайте три объекта класса `Planet` с разными названиями планет
+# 5. Выведите название каждой планеты
+
+class Planet:
+    def __init__(self,name):
+        self.name = name
+my_planet1 = Planet("Земля")
+my_planet2 = Planet("Юпитер")
+my_planet3 = Planet("Сатурн")
+print(my_planet1.name)
+print(my_planet2.name)
+print(my_planet3.name)
+
+
+
+# Задача №98 (Тема: Понимание параметра self)
+# Создайте класс, демонстрирующий работу self:
+# 1. Создайте класс `Counter`
+# 2. Добавьте конструктор `__init__` с параметром `start`
+# 3. Сохраните начальное значение как атрибут `count`
+# 4. Добавьте метод `increase`, который увеличивает `count` на 2
+# 5. Добавьте метод `decrease`, который уменьшает `count` на 1
+# 6. Добавьте метод `show`, который выводит текущее значение
+# 7. Создайте объект класса `Counter` с начальным значением 5
+# 8. Вызовите `show`, затем `increase`, затем `show`, затем `decrease`, затем `show`
+
+class Counter:
+    def __init__(self,start):
+        self.count = start
+    def increment(self):
+        self.count += 2
+    def decrease(self):
+        self.count -= 1
+    def show(self):
+        print(self.count)
+my_counter = Counter(5)
+my_counter.show()
+my_counter.increment()
+my_counter.show()
+my_counter.decrease()
+my_counter.show()
