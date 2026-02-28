@@ -1541,3 +1541,110 @@ my_counter.increment()
 my_counter.show()
 my_counter.decrease()
 my_counter.show()
+
+
+# Задача №99 (Тема: Создание класса)
+# Создайте пустой класс:
+# 1. Создайте класс с именем `Cup`
+# 2. Используйте `pass` внутри класса
+# 3. Класс пока не должен содержать никаких атрибутов и методов
+
+
+class Cup:
+    pass
+
+
+
+# Задача №100 (Тема: Общие атрибуты)
+# Создайте класс с общим атрибутом:
+# 1. Создайте класс `Forest`
+# 2. Добавьте общий атрибут класса `type` со значением "лес"
+# 3. Выведите этот атрибут на экран через обращение к классу
+
+
+class Forest:
+    type = "лес"
+print(Forest.type)
+
+
+# Задача №101 (Тема: Конструктор класса __init__)
+# Создайте класс с конструктором:
+# 1. Создайте класс `Song`
+# 2. Добавьте конструктор `__init__` с параметрами `title` и `artist`
+# 3. Внутри конструктора сохраните их как атрибуты экземпляра
+# 4. Создайте объект класса `Song` с названием "Yesterday" и исполнителем "The Beatles"
+# 5. Выведите атрибуты созданного объекта
+
+
+class Song:
+    def __init__(self,title,artist):
+        self.title = title
+        self.artist = artist
+my_song = Song("Yesterday", "The Beatles")
+print(my_song.title)
+print(my_song.artist)
+
+
+# Задача №102 (Тема: Методы класса)
+# Создайте класс с методом:
+# 1. Создайте класс `Printer`
+# 2. Добавьте метод `print_text` с параметрами `self` и `text`
+# 3. Метод должен выводить: "Печатаю: [text]"
+# 4. Создайте объект класса `Printer`
+# 5. Вызовите метод с текстом "Отчет за год"
+
+
+class Printer:
+    def print_text(self,text):
+        print(f"Печатаю:{text}")
+my_printer = Printer()
+my_printer.print_text("Отчет за год")
+
+
+
+# Задача №103 (Тема: Объект класса)
+# Создайте несколько объектов класса:
+# 1. Создайте класс `City`
+# 2. Добавьте конструктор `__init__` с параметром `name`
+# 3. Сохраните название как атрибут экземпляра
+# 4. Создайте три объекта класса `City` с разными названиями городов
+# 5. Выведите название каждого города
+
+class City:
+    def __init__(self,name):
+        self.name = name
+my_city = City("Ставрополь")
+my_city1 = City("Краснодар")
+my_city3 = City("Москва")
+print(my_city.name)
+print(my_city1.name)
+print(my_city3.name)
+
+
+# Задача №104 (Тема: Понимание параметра self)
+# Создайте класс, демонстрирующий работу self:
+# 1. Создайте класс `Counter`
+# 2. Добавьте конструктор `__init__` с параметром `start`
+# 3. Сохраните начальное значение как атрибут `count`
+# 4. Добавьте метод `add_five`, который увеличивает `count` на 5
+# 5. Добавьте метод `reset`, который сбрасывает `count` в 0
+# 6. Добавьте метод `show`, который выводит текущее значение
+# 7. Создайте объект класса `Counter` с начальным значением 10
+# 8. Вызовите `show`, затем `add_five`, затем `show`, затем `reset`, затем `show`
+
+
+class Counter:
+    def __init__(self,start):
+        self.count = start
+    def add_five(self):
+        self.count += 5
+    def reset(self):
+        self.count = 0
+    def show(self):
+        print(self.count)
+my_counter = Counter(10)
+my_counter.show()
+my_counter.add_five()
+my_counter.show()
+my_counter.reset()
+my_counter.show()
