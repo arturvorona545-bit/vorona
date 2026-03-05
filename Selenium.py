@@ -62,3 +62,21 @@ current_address_field.send_keys("123 Main Street, Springfield")
 field_value = current_address_field.get_attribute("value")
 assert field_value == "123 Main Street, Springfield"
 time.sleep(1)
+
+
+
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys  # 1. Импортируем Keys
+import time
+driver = webdriver.Chrome()
+driver.get("https://demoqa.com/automation-practice-form")
+
+last_name_filed = driver.find_element("xpath", "//input[@id='lastName']")
+last_name_filed.clear()
+last_name_filed.send_keys("Vorona")
+field_value = last_name_filed.get_attribute("value")
+assert field_value == "Vorona"
+last_name_filed.send_keys(Keys.BACKSPACE)
+field_value = last_name_filed.get_attribute("value")
+assert field_value == "Voron"
+time.sleep(1)
