@@ -1648,3 +1648,120 @@ my_counter.add_five()
 my_counter.show()
 my_counter.reset()
 my_counter.show()
+
+
+
+# Задача №105 (Тема: Создание класса)
+# Создайте пустой класс:
+# 1. Создайте класс с именем `Backpack`
+# 2. Используйте `pass` внутри класса
+# 3. Класс пока не должен содержать никаких атрибутов и методов
+
+class Backpack():
+    pass
+
+
+
+
+# Задача №106 (Тема: Общие атрибуты)
+# Создайте класс с общим атрибутом:
+# 1. Создайте класс `Planet`
+# 2. Добавьте общий атрибут класса `type` со значением "планета"
+# 3. Выведите этот атрибут на экран через обращение к классу
+
+
+class Planet():
+    type = "Планета"
+print(Planet.type)
+
+
+
+# Задача №107 (Тема: Конструктор класса __init__)
+# Создайте класс с конструктором:
+# 1. Создайте класс `Book`
+# 2. Добавьте конструктор `__init__` с параметрами `title` и `author`
+# 3. Внутри конструктора сохраните их как атрибуты экземпляра
+# 4. Создайте объект класса `Book` с названием "Мастер и Маргарита" и автором "Булгаков"
+# 5. Выведите атрибуты созданного объекта
+
+class Book():
+    def __init__(self,title,author):
+        self.title = title
+        self.author = author
+my_book = Book("Мастер и Маргарита", "Булгаков")
+
+print(my_book.title)
+print(my_book.author)
+
+
+
+# Задача №108 (Тема: Методы класса)
+# Создайте класс с методом:
+# 1. Создайте класс `Printer`
+# 2. Добавьте метод `print_line` с параметрами `self` и `text`
+# 3. Метод должен выводить: "Печатаю: [text]"
+# 4. Создайте объект класса `Printer`
+# 5. Вызовите метод с текстом "Отчет по продажам"
+
+class Printer():
+    def print_line(self,text):
+        print(f"Печатаю: {text}")
+my_printer = Printer()
+my_printer.print_line("Отчет по продажам")
+
+
+
+# Задача №109 (Тема: Объект класса)
+# Создайте несколько объектов класса:
+# 1. Создайте класс `Song`
+# 2. Добавьте конструктор `__init__` с параметрами `title` и `artist`
+# 3. Сохраните их как атрибуты экземпляра
+# 4. Создайте три объекта класса `Song` с разными названиями песен и исполнителями
+# 5. Выведите информацию о каждой песне
+
+
+class Song():
+    def __init__(self,title,artist):
+        self.title = title
+        self.artist = artist
+my_song = Song("Yesterday", "The Beatles")
+my_song1 = Song("Yesterday1", "The Beatles2")
+my_song2 = Song("Yesterday2", "The Beatles2")
+
+
+print(my_song.title, my_song.artist)
+print(my_song1.title, my_song1.artist)
+print(my_song2.title, my_song2.artist)
+
+
+# Задача №110 (Тема: Понимание параметра self)
+# Создайте класс, демонстрирующий работу self:
+# 1. Создайте класс `Counter`
+# 2. Добавьте конструктор `__init__` с параметром `start`
+# 3. Сохраните начальное значение как атрибут `count`
+# 4. Добавьте метод `add_ten`, который увеличивает `count` на 10
+# 5. Добавьте метод `subtract_five`, который уменьшает `count` на 5
+# 6. Добавьте метод `show`, который выводит текущее значение
+# 7. Создайте объект класса `Counter` с начальным значением 20
+# 8. Вызовите `show`, затем `add_ten`, затем `show`, затем `subtract_five`, затем `show`
+
+class Counter:
+    def __init__(self,start):
+        self.count = start
+    def add_ten(self):
+        self.count += 10
+    def reset(self):
+        self.count = 0
+    def show(self):
+        print(self.count)
+    def subtract_five(self):
+        self.count -= 5
+
+my_counter = Counter(20)
+my_counter.show()
+my_counter.add_ten()
+my_counter.show()
+my_counter.subtract_five()
+my_counter.show()
+
+
